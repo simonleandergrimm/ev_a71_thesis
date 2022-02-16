@@ -1,0 +1,54 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 3
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count    min threads    max threads
+---------  -------  -------------  -------------
+all              1              1              1
+ancestral        1              1              1
+clades           2              1              1
+export           2              1              1
+refine           1              1              1
+traits           2              1              1
+translate        2              1              1
+total           11              1              1
+
+Select jobs to execute...
+
+[Thu Feb 10 12:08:53 2022]
+Job 2: 
+        Refining tree
+          - estimate timetree
+          - use opt coalescent timescale
+          - estimate marginal node dates
+          - filter tips more than 3 IQDs from clock expectation
+        
+
+
+[Thu Feb 10 12:08:53 2022]
+Job 27: Inferring ancestral traits for country
+
+
+[Thu Feb 10 12:08:53 2022]
+Job 29: Translating amino acid sequences
+
+[Thu Feb 10 12:08:54 2022]
+Error in rule traits:
+    jobid: 27
+    output: ev_a71/whole_genome/results/traits.json
+    shell:
+        
+        augur traits             --tree ev_a71/whole_genome/results/tree.nwk             --metadata ev_a71/whole_genome/results/cleaned_metadata.tsv             --output-node-data ev_a71/whole_genome/results/traits.json             --columns country             --confidence
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Feb 10 12:08:57 2022]
+Finished job 29.
+1 of 11 steps (9%) done
+[Thu Feb 10 13:41:25 2022]
+Finished job 2.
+2 of 11 steps (18%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/thesis_data/trial_builds/10_02_22_curl_vipr_build/.snakemake/log/2022-02-10T120853.179286.snakemake.log

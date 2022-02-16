@@ -1,0 +1,329 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count    min threads    max threads
+---------------------  -------  -------------  -------------
+align                        2              1              1
+all                          1              1              1
+ancestral                    2              1              1
+clades                       2              1              1
+date_parse                   2              1              1
+export                       2              1              1
+filter                       2              1              1
+index_sequences              2              1              1
+parse                        2              1              1
+reference_gb_to_fasta        2              1              1
+refine                       2              1              1
+remove_duplicates            2              1              1
+subsample_by_length          2              1              1
+traits                       2              1              1
+translate                    2              1              1
+tree                         2              1              1
+total                       31              1              1
+
+Select jobs to execute...
+
+[Mon Jan 24 20:05:24 2022]
+Job 8: 
+        Subsampling sequences by length (vp1 = 600-8000bp,
+                                         whole genome = 6400-8000bp)
+        
+
+[Mon Jan 24 20:05:25 2022]
+Finished job 8.
+1 of 31 steps (3%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:25 2022]
+Job 23: 
+        Subsampling sequences by length (vp1 = 600-8000bp,
+                                         whole genome = 6400-8000bp)
+        
+
+[Mon Jan 24 20:05:25 2022]
+Finished job 23.
+2 of 31 steps (6%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:25 2022]
+Job 22: 
+        Parsing sequences and metadata from viprbrc.fasta
+        
+
+[Mon Jan 24 20:05:27 2022]
+Finished job 22.
+3 of 31 steps (10%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:27 2022]
+Job 7: 
+        Parsing sequences and metadata from viprbrc.fasta
+        
+
+[Mon Jan 24 20:05:28 2022]
+Finished job 7.
+4 of 31 steps (13%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:28 2022]
+Job 6: 
+        Removing duplicate sequences
+        
+
+[Mon Jan 24 20:05:29 2022]
+Finished job 6.
+5 of 31 steps (16%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:29 2022]
+Job 21: 
+        Removing duplicate sequences
+        
+
+[Mon Jan 24 20:05:29 2022]
+Finished job 21.
+6 of 31 steps (19%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:29 2022]
+Job 24: 
+        Creating an index of sequence composition for filtering
+        
+
+[Mon Jan 24 20:05:30 2022]
+Finished job 24.
+7 of 31 steps (23%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:30 2022]
+Job 10: 
+        Cleaning dates in metadata
+        
+
+[Mon Jan 24 20:05:30 2022]
+Finished job 10.
+8 of 31 steps (26%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:31 2022]
+Job 25: 
+        Cleaning dates in metadata
+        
+
+[Mon Jan 24 20:05:31 2022]
+Finished job 25.
+9 of 31 steps (29%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:31 2022]
+Job 11: 
+        Converting reference sequence from genbank to fasta format
+        
+
+[Mon Jan 24 20:05:31 2022]
+Finished job 11.
+10 of 31 steps (32%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:31 2022]
+Job 26: 
+        Converting reference sequence from genbank to fasta format
+        
+
+[Mon Jan 24 20:05:31 2022]
+Finished job 26.
+11 of 31 steps (35%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:31 2022]
+Job 20: 
+        Filtering to
+          - 2000 sequence(s) per country
+          - from 1970 onwards
+          - excluding strains in ev_a71/whole_genome/config/dropped_strains.txt
+        
+
+[Mon Jan 24 20:05:32 2022]
+Finished job 20.
+12 of 31 steps (39%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:32 2022]
+Job 19: 
+        Aligning sequences to ev_a71/whole_genome/results/reference_sequence.fasta using Nextalign
+        
+
+[Mon Jan 24 20:05:36 2022]
+Finished job 19.
+13 of 31 steps (42%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:36 2022]
+Job 9: 
+        Creating an index of sequence composition for filtering
+        
+
+[Mon Jan 24 20:05:37 2022]
+Finished job 9.
+14 of 31 steps (45%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:05:37 2022]
+Job 18: Building tree
+
+[Mon Jan 24 20:07:04 2022]
+Finished job 18.
+15 of 31 steps (48%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:07:05 2022]
+Job 17: 
+        Refining tree
+          - estimate timetree
+          - use opt coalescent timescale
+          - estimate marginal node dates
+          - filter tips more than 3 IQDs from clock expectation
+        
+
+[Mon Jan 24 20:16:55 2022]
+Finished job 17.
+16 of 31 steps (52%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:16:55 2022]
+Job 28: Reconstructing ancestral sequences and mutations
+
+[Mon Jan 24 20:17:24 2022]
+Finished job 28.
+17 of 31 steps (55%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:17:24 2022]
+Job 29: Translating amino acid sequences
+
+[Mon Jan 24 20:17:27 2022]
+Finished job 29.
+18 of 31 steps (58%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:17:27 2022]
+Job 30: Assigning clades according to nucleotide mutations
+
+[Mon Jan 24 20:17:28 2022]
+Finished job 30.
+19 of 31 steps (61%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:17:28 2022]
+Job 5: 
+        Filtering to
+          - 2000 sequence(s) per country
+          - from 1970 onwards
+          - excluding strains in ev_a71/vp1/config/dropped_strains.txt
+        
+
+[Mon Jan 24 20:17:30 2022]
+Finished job 5.
+20 of 31 steps (65%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:17:30 2022]
+Job 4: 
+        Aligning sequences to ev_a71/vp1/results/reference_sequence.fasta using Nextalign
+        
+
+[Mon Jan 24 20:17:34 2022]
+Finished job 4.
+21 of 31 steps (68%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:17:34 2022]
+Job 3: Building tree
+
+[Mon Jan 24 20:20:00 2022]
+Finished job 3.
+22 of 31 steps (71%) done
+Select jobs to execute...
+
+[Mon Jan 24 20:20:00 2022]
+Job 2: 
+        Refining tree
+          - estimate timetree
+          - use opt coalescent timescale
+          - estimate marginal node dates
+          - filter tips more than 3 IQDs from clock expectation
+        
+
+[Mon Jan 24 21:00:11 2022]
+Finished job 2.
+23 of 31 steps (74%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:00:11 2022]
+Job 13: Reconstructing ancestral sequences and mutations
+
+[Mon Jan 24 21:00:32 2022]
+Finished job 13.
+24 of 31 steps (77%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:00:32 2022]
+Job 14: Translating amino acid sequences
+
+[Mon Jan 24 21:00:35 2022]
+Finished job 14.
+25 of 31 steps (81%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:00:35 2022]
+Job 15: Assigning clades according to nucleotide mutations
+
+[Mon Jan 24 21:00:37 2022]
+Finished job 15.
+26 of 31 steps (84%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:00:37 2022]
+Job 27: Inferring ancestral traits for country
+
+[Mon Jan 24 21:00:49 2022]
+Finished job 27.
+27 of 31 steps (87%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:00:49 2022]
+Job 12: Inferring ancestral traits for country
+
+[Mon Jan 24 21:01:51 2022]
+Finished job 12.
+28 of 31 steps (90%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:01:51 2022]
+Job 16: Exporting data files for for auspice
+
+[Mon Jan 24 21:01:55 2022]
+Finished job 16.
+29 of 31 steps (94%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:01:55 2022]
+Job 1: Exporting data files for for auspice
+
+[Mon Jan 24 21:02:01 2022]
+Finished job 1.
+30 of 31 steps (97%) done
+Select jobs to execute...
+
+[Mon Jan 24 21:02:01 2022]
+localrule all:
+    input: ev_a71/vp1/auspice/ev_a71_vp1.json, ev_a71/whole_genome/auspice/ev_a71_whole_genome.json
+    jobid: 0
+    resources: tmpdir=/var/folders/pq/97vh46ln7vn7hcjc0w0lq_jr0000gn/T
+
+[Mon Jan 24 21:02:01 2022]
+Finished job 0.
+31 of 31 steps (100%) done
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/thesis_data/00_github_enterovirus_a71/.snakemake/log/2022-01-24T200523.912180.snakemake.log

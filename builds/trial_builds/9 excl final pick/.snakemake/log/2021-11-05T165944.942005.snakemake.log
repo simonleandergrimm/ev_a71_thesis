@@ -1,0 +1,116 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count    min threads    max threads
+---------  -------  -------------  -------------
+align            1              1              1
+ancestral        1              1              1
+clades           1              1              1
+export           1              1              1
+filter           1              1              1
+refine           1              1              1
+traits           1              1              1
+translate        1              1              1
+tree             1              1              1
+total            9              1              1
+
+Select jobs to execute...
+
+[Fri Nov  5 16:59:45 2021]
+Job 4: 
+        Filtering to
+          - 2000 sequence(s) per country
+          - from 1970 onwards
+        
+
+[Fri Nov  5 16:59:46 2021]
+Finished job 4.
+1 of 9 steps (11%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:46 2021]
+Job 3: 
+        Aligning sequences to ev_a71/vp1/results/reference_sequence.fasta using Nextalign
+        
+
+[Fri Nov  5 16:59:51 2021]
+Finished job 3.
+2 of 9 steps (22%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:51 2021]
+Job 2: Building tree
+
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:02:47 2021]
+Finished job 2.
+3 of 9 steps (33%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:02:47 2021]
+Job 1: 
+        Refining tree
+          - estimate timetree
+          - use opt coalescent timescale
+          - estimate marginal node dates
+          - filter tips more than 3 IQDs from clock expectation
+        
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:40:19 2021]
+Finished job 1.
+4 of 9 steps (44%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:40:19 2021]
+Job 11: Inferring ancestral traits for country
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:41:21 2021]
+Finished job 11.
+5 of 9 steps (56%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:41:21 2021]
+Job 12: Reconstructing ancestral sequences and mutations
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:41:43 2021]
+Finished job 12.
+6 of 9 steps (67%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:41:43 2021]
+Job 13: Translating amino acid sequences
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:41:46 2021]
+Finished job 13.
+7 of 9 steps (78%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:41:46 2021]
+Job 14: Assigning clades according to nucleotide mutations
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:41:47 2021]
+Finished job 14.
+8 of 9 steps (89%) done
+Select jobs to execute...
+
+[Fri Nov  5 17:41:47 2021]
+Job 0: Exporting data files for for auspice
+
+Failed to set marker file for job started ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Snakemake will work, but cannot ensure that output files are complete in case of a kill signal or power loss. Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+Error recording metadata for finished job ([Errno 2] No such file or directory: '/Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/incomplete'). Please ensure write permissions for the directory /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake
+[Fri Nov  5 17:41:54 2021]
+Finished job 0.
+9 of 9 steps (100%) done
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/.snakemake/log/2021-11-05T165944.942005.snakemake.log
