@@ -125,3 +125,25 @@ Job 1:
           - filter tips more than 3 IQDs from clock expectation
         
 
+[Mon Feb 21 11:20:48 2022]
+Finished job 1.
+10 of 15 steps (67%) done
+Select jobs to execute...
+
+[Mon Feb 21 11:20:48 2022]
+Job 12: Reconstructing ancestral sequences and mutations
+
+
+[Mon Feb 21 11:20:48 2022]
+Job 11: Inferring ancestral traits for country
+
+[Mon Feb 21 11:20:50 2022]
+Error in rule traits:
+    jobid: 11
+    output: ev_a71/vp1/results/traits.json
+    shell:
+        
+        augur traits             --tree ev_a71/vp1/results/tree.nwk             --metadata ev_a71/vp1/results/cleaned_metadata.tsv             --output-node-data ev_a71/vp1/results/traits.json             --columns country             --confidence
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
