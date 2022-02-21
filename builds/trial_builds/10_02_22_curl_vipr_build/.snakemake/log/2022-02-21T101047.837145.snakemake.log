@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count    min threads    max threads
+---------  -------  -------------  -------------
+ancestral        1              1              1
+clades           1              1              1
+export           1              1              1
+traits           1              1              1
+translate        1              1              1
+total            5              1              1
+
+Select jobs to execute...
+
+[Mon Feb 21 10:10:48 2022]
+Job 11: Inferring ancestral traits for country
+
+
+[Mon Feb 21 10:10:48 2022]
+Job 12: Reconstructing ancestral sequences and mutations
+
+[Mon Feb 21 10:10:49 2022]
+Error in rule traits:
+    jobid: 11
+    output: ev_a71/vp1/results/traits.json
+    shell:
+        
+        augur traits             --tree ev_a71/vp1/results/tree.nwk             --metadata ev_a71/vp1/results/cleaned_metadata.tsv             --output-node-data ev_a71/vp1/results/traits.json             --columns country             --confidence
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Terminating processes on user request, this might take some time.
+[Mon Feb 21 10:11:02 2022]
+Error in rule ancestral:
+    jobid: 12
+    output: ev_a71/vp1/results/nt_muts.json
+    shell:
+        
+        augur ancestral             --tree ev_a71/vp1/results/tree.nwk             --alignment ev_a71/vp1/results/aligned.fasta             --output-node-data ev_a71/vp1/results/nt_muts.json             --inference joint
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/object_level/data/ev_a71_thesis/builds/trial_builds/10_02_22_curl_vipr_build/.snakemake/log/2022-02-21T101047.837145.snakemake.log

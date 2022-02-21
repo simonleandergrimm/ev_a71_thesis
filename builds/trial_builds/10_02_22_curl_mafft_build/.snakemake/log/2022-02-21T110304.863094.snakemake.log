@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count    min threads    max threads
+---------  -------  -------------  -------------
+ancestral        1              1              1
+clades           1              1              1
+export           1              1              1
+refine           1              1              1
+traits           1              1              1
+translate        1              1              1
+tree             1              1              1
+total            7              1              1
+
+Select jobs to execute...
+
+[Mon Feb 21 11:03:05 2022]
+Job 2: Building tree
+
+[Mon Feb 21 11:03:06 2022]
+Error in rule tree:
+    jobid: 2
+    output: ev_a71/vp1/results/tree_raw.nwk
+    shell:
+        
+        augur tree             --alignment ev_a71/vp1/results/aligned.fasta             --output ev_a71/vp1/results/tree_raw.nwk
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/object_level/data/ev_a71_thesis/builds/trial_builds/10_02_22_curl_mafft_build/.snakemake/log/2022-02-21T110304.863094.snakemake.log

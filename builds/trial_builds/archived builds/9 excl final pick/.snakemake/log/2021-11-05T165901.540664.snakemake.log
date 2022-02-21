@@ -1,0 +1,96 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count    min threads    max threads
+---------------------  -------  -------------  -------------
+align                        1              1              1
+ancestral                    1              1              1
+clades                       1              1              1
+date_parse                   1              1              1
+export                       1              1              1
+filter                       1              1              1
+index_sequences              1              1              1
+parse                        1              1              1
+reference_gb_to_fasta        1              1              1
+refine                       1              1              1
+remove_duplicates            1              1              1
+subsample_by_length          1              1              1
+traits                       1              1              1
+translate                    1              1              1
+tree                         1              1              1
+total                       15              1              1
+
+Select jobs to execute...
+
+[Fri Nov  5 16:59:01 2021]
+Job 10: 
+        Converting reference sequence from genbank to fasta format
+        
+
+[Fri Nov  5 16:59:02 2021]
+Finished job 10.
+1 of 15 steps (7%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:02 2021]
+Job 7: 
+        Subsampling sequences by length (vp1 = 600-8000bp,
+                                         whole genome = 6400-8000bp)
+        
+
+[Fri Nov  5 16:59:02 2021]
+Finished job 7.
+2 of 15 steps (13%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:02 2021]
+Job 6: 
+        Parsing sequences and metadata from viprbrc.fasta
+        
+
+[Fri Nov  5 16:59:03 2021]
+Finished job 6.
+3 of 15 steps (20%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:03 2021]
+Job 9: 
+        Cleaning dates in metadata
+        
+
+[Fri Nov  5 16:59:04 2021]
+Finished job 9.
+4 of 15 steps (27%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:04 2021]
+Job 5: 
+        Removing duplicate sequences
+        
+
+[Fri Nov  5 16:59:04 2021]
+Finished job 5.
+5 of 15 steps (33%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:04 2021]
+Job 8: 
+        Creating an index of sequence composition for filtering
+        
+
+[Fri Nov  5 16:59:06 2021]
+Finished job 8.
+6 of 15 steps (40%) done
+Select jobs to execute...
+
+[Fri Nov  5 16:59:06 2021]
+Job 4: 
+        Filtering to
+          - 2000 sequence(s) per country
+          - from 1970 onwards
+        
+
+RuleException in line 119 of /Users/simongrimm/Documents/universitaet_basel/thesis/nextstrain/data/ignore_these_builds/build without exclusions/Snakefile:
+'InputFiles' object has no attribute 'exclude'

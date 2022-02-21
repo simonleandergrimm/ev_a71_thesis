@@ -166,6 +166,62 @@ rule reference_gb_to_fasta:
             --output {output.reference}
         """
 
+
+rule blast:
+    input:
+        blast_db_file = rules.reference_gb_to_fasta.output.reference,
+        seqs_to_blast = sequences = rules.filter.output.sequences
+    output:
+        blast_out = "ev_a71/{segments}/results/blast_out.csv"
+    run:
+        from subprocess import call
+        import os
+        comm = ["makeblastdb -in", input.blast_db_file, "-out ev_a71/vp1/results/entero_db_vp1 -dbtype nucl"]
+        cmd = " ".join(comm)
+        os.system(cmd)
+        comm2 = ["blastn -task blastn -query", input.seqs_to_blast, "-db ev_a71/vp1/results/entero_db_vp -outfmt '10 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qcovs' -out", output.blast_out, "-evalue 0.0005"]
+        cmd2 = " ".join(comm2)
+        os.system(cmd2)
+
+        #blast output is specified by the call - here is what the columns are:
+        #(query is the Genbank seq we are looking for a match in, subject is the reference VP1 alignment)
+        ##First 7 columns:
+        #10     qseqid  sseqid  pident  length      mismatch    gapopen
+        #csv    queryID subjID  %match  alignLen    #mismatch   #gap
+
+        ##Next 4 columns
+        #qstart                     qend                    sstart                  send
+        #start of align in query    end of align in query   start of align in subj  end of align in subj
+
+        ##Last 3 columns
+        #evalue         bitscore    qcovs
+        #Expect value   Bit score   Querty coverage per subject
+
+##############################
+# If VP1 - after BLAST, take only those that match
+###############################
+rule blast_sort:
+    input:
+        blast_result = rules.blast.output.blast_out,
+        input_meta = rules.date_parse.output.metadata, #from rule date_parse output
+        input_seqs = rules.filter.output.sequences #from rule align output
+    output:
+        out_seqs = "ev_a71/vp1/results/blast_sorted_sequences.fasta",
+        out_meta = "ev_a71/vp1/results/blast_sorted_meta.tsv"
+    params:
+        matchLen = 300,
+        dups = "vp1/temp/duplicates.tsv"
+    shell:
+        """
+        python scripts/blast_sort.py --blast {input.blast_result} \
+            --meta {input.input_meta} \
+            --seqs {input.input_seqs} \
+            --out_seqs {output.out_seqs} \
+            --out_meta {output.out_meta} \
+            --match_length {params.matchLen} \
+            --dup_file {params.dups}
+            """
+
 rule align:
     message:
         """
@@ -174,7 +230,7 @@ rule align:
         Software, 6(67), 3773. https://doi.org/10.21105/joss.03773
         """
     input:
-        sequences = rules.filter.output.sequences,
+        sequences = rules.blast_sort.output.out_seqs,
         reference = rules.reference_gb_to_fasta.output.reference
     output:
         alignment = "ev_a71/{segments}/results/aligned.fasta",
@@ -219,7 +275,7 @@ rule refine:
     input:
         tree = rules.tree.output.tree,
         alignment = rules.align.output.alignment,
-        metadata = rules.date_parse.output.metadata
+        metadata = rules.blast_sort.output.out_meta
     output:
         tree = "ev_a71/{segments}/results/tree.nwk",
         node_data = "ev_a71/{segments}/results/branch_lengths.json"
@@ -261,7 +317,7 @@ rule ancestral:
             --tree {input.tree} \
             --alignment {input.alignment} \
             --output-node-data {output.node_data} \
-            --inference {params.inference}
+            --inference {params.inference} \
         """
 
 rule translate:
@@ -316,8 +372,6 @@ rule traits:
             --columns {params.columns} \
             --confidence
         """
-
-
 
 rule export:
     message: "Exporting data files for for auspice"
