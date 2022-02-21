@@ -147,3 +147,9 @@ Error in rule traits:
         
         (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
 
+[Mon Feb 21 11:21:21 2022]
+Finished job 12.
+11 of 15 steps (73%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/simongrimm/Documents/universitaet_basel/thesis/object_level/data/ev_a71_thesis/builds/trial_builds/10_02_22_curl_vipr_build/.snakemake/log/2022-02-21T101107.649653.snakemake.log
